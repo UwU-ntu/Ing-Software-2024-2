@@ -1,6 +1,6 @@
 from sqlalchemy import Column, Integer, String
-
-from alchemyClasses import db
+from . import db
+# from alchemyClasses import db
 
 
 class Alumno(db.Model):

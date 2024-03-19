@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Usuarios</title>
+</head>
+<body>
+    <h3><a href="/usuarios/agregar">Agregar nuevo usuario</a></h3>
+    <table>
+        <tr>
+            <th>Nombre</th>
+            <th>Apellido Paterno</th>
+            <th>Apellido Materno</th>
+            <th>email</th>
+            <th>Admin</th>
+        </tr>
+        {% for user in users}
+            <tr>
+                <td> {{user.nombre}}</td>
+                <td> {{user.ap_paterno}}</td>
+                <td> {{user.ap_materno}}</td>
+                <td> {{user.email}}</td>
+                <td> {{user.super_user}}</td>
+            </tr>
+        {% endfor}
+
+    </table>
+</body>
+</html>
