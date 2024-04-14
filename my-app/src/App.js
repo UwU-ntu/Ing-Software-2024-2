@@ -2,46 +2,103 @@ import React, { useState } from "react";
 
 import "./App.css";
 
-import Alumnos from "./components/Alumnos/Alumnos";
-import NuevoAlumno from "./components/NuevoAlumno/NuevoAlumno";
-
-function App() {
-  const [peliculas, setPeliculas] = useState([
-    { id: 1, title: "Spiderman", director: "Sam R." },
-    { id: 2, title: "Batman", director: "Tim Burton" },
-    { id: 3, title: "Inception", director: "Christopher Nolan", inventario: 4 },
-  ]);
-
-  const [alumnos, setAlumnos] = useState([
+import FiltroVistas from "./components/Elementos/FiltroVistas";
+  
+  const DUMMY_USERS = [
     {
-      nombre: "Fernando",
-      apellido: "Fong",
-      numCta: 313320679,
+      nombre: "Pancho",
+      apellido: "Sanchez",
+      genero: "Masculino",
+      edad: 19
     },
     {
-      nombre: "Valeria",
-      apellido: "Garcia",
-      numCta: 314006088,
+      nombre: "Laura",
+      apellido: "Torres",
+      genero: "Femenino",
+      edad: 24
     },
     {
-      nombre: "Erick",
-      apellido: "Martinez",
-      numCta: 414890123,
-    },
-  ]);
+      nombre: "Paco",
+      apellido: "Perez",
+      genero: "Masculino",
+      edad: 16
+    }
+  ]
 
-  const agregarAlumno = (alumno) => {
-    const nuevoAlumno = [alumno, ...alumnos];
-    setAlumnos(nuevoAlumno);
-    console.log(nuevoAlumno);
+  const DUMMY_MOVIES = [
+    {
+      nombre: "Silent Hill",
+      genero: "Terror",
+      anio: 2001,
+      director: "no se .-.",
+      inventario: 6
+    },
+    {
+      nombre: "El laberinto del Fauno",
+      genero: "Drama",
+      anio: 2003,
+      director: "Guillermo del Toro",
+      inventario: 2
+    },
+    {
+      nombre: "Into the Spiderverse",
+      genero: "Acción",
+      anio: 2018,
+      director: "-------",
+      inventario: 8
+    }
+  ]
+
+  const DUMMY_RENTALS = [
+    {
+      pelicula: "Into the Spiderverse",
+      usuario: "Laura Torres",
+      fecha: '2023-04-15',
+      dias: 21
+    },
+    {
+      pelicula: "El laberinto del Fauno",
+      usuario: "Paco Pérez",
+      fecha: '2024-06-12',
+      dias: 9
+    }
+  ]
+
+
+
+  const App = () => {
+
+    const [peliculas, setPeliculas] = useState(DUMMY_MOVIES);
+
+    const [usuarios, setUsuarios] = useState(DUMMY_USERS);
+
+    const [rentas, setRentas] = useState(DUMMY_RENTALS);
+
+    const [selectedView, setSelectedView] = useState('SampleView');
+
+    const filterChangeHandler = (selectedView) => {
+      setSelectedView(selectedView);
+    };
+
+
+    return(
+      <div className="App">
+        <h1>Servicio de Renta de Peliculas</h1>
+        <FiltroVistas 
+          selected={selectedView}
+          onChangeFilter={filterChangeHandler}
+        />
+      </div>
+    );
+
   };
 
-  return (
-    <div className="App">
-      <NuevoAlumno onAgregarAlumno={agregarAlumno} />
-      <Alumnos alumnos={alumnos} />
-    </div>
-  );
-}
+  //return (
+  //  <div className="App">
+  //    <NuevoAlumno onAgregarAlumno={agregarAlumno} />
+  //    <Alumnos alumnos={alumnos} />
+  //  </div>
+  //);
+
 
 export default App;

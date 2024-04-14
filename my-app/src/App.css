@@ -2,6 +2,14 @@
   text-align: center;
 }
 
+body{
+  background-color: #811D53;
+    color: #BFB6CD;
+    height: 100%;
+    width: 100%;
+    font-family: serif;
+}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -36,3 +44,4 @@
     transform: rotate(360deg);
   }
 }
+

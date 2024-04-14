@@ -1,0 +1,22 @@
+.filtro-vistas select{
+    padding: 0.5rem 3rem;
+    font-weight: bold;
+    border-radius: 10px;
+    color: black;
+    background-color: #1F98D3;
+    border: none;
+
+}
+
+.filtro-vistas label{
+    font-weight: bold;
+    padding: 2rem 1rem;
+    margin-bottom: 0.6rem;
+}
+
+.filtro-vistas__control{
+    justify-content: space-between;
+    display: block;
+    align-items: center;
+    padding: 1rem;
+}
