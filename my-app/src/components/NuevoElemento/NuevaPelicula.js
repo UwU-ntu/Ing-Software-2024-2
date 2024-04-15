@@ -1,21 +1,19 @@
 import React from "react";
 
 import './NuevaPelicula.css';
+import Card from '../UI/Card';
 import PeliculaForm from "./PeliculaForm/PeliculaForm";
 
 const NuevaPelicula = (props) => {
     
     const guardaPeliculaHandler = (peliculaIngresada) => {
-        const peliculas = { 
-            ...peliculaIngresada
-        };
-        props.onAgregarPelicula(peliculas);
+        props.onAgregarPelicula(peliculaIngresada);
     };
 
     return (
-        <div className="nueva-pelicula">
-            <PeliculaForm onGuardarPelicula={guardaPeliculaHandler} />
-        </div>
+        <Card className="nueva-pelicula">
+            <PeliculaForm onGuardarPelicula={guardaPeliculaHandler}/>
+        </Card>
     )
 }
 

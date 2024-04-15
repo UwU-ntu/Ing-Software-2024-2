@@ -74,7 +74,7 @@ const RentaForm = (props) => {
           <label>Fecha: </label>
           <input
             type="date"
-            value={fechaIngresada}
+            value={fechaIngresada.toISOString().split('T')[0]}
             onChange={cambioFechaHandler}
           />
         </div>

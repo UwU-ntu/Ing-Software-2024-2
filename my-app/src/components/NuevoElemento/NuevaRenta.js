@@ -1,21 +1,19 @@
 import React from "react";
 
 import './NuevaRenta.css';
+import Card from '../UI/Card';
 import RentaForm from "./RentaForm/RentaForm";
 
 const NuevaRenta = (props) => {
     
     const guardaRentaHandler = (rentaIngresada) => {
-        const rentas = { 
-            ...rentaIngresada
-        };
-        props.onAgregarRenta(rentas);
+        props.onAgregarRenta(rentaIngresada);
     };
 
     return (
-        <div className="nueva-renta">
-            <RentaForm onGuardarRenta={guardaRentaHandler} />
-        </div>
+        <Card className="nueva-renta">
+            <RentaForm onGuardarRenta={guardaRentaHandler}/>
+        </Card>
     )
 }
 

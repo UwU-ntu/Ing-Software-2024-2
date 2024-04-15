@@ -7,10 +7,7 @@ import UsuarioForm from "./UsuarioForm/UsuarioForm";
 const NuevoUsuario = (props) => {
     
     const guardaUsuarioHandler = (usuarioIngresado) => {
-        const usuarios = { 
-            ...usuarioIngresado
-        };
-        props.onAgregarUsuario(usuarios);
+        props.onAgregarUsuario(usuarioIngresado);
     };
 
     return (

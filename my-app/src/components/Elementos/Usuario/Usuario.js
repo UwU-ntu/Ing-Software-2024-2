@@ -8,9 +8,9 @@ const Usuario = (props) => {
     <li>
       <Card className='usuario'>
         <div className='usuario-descripcion'>
-          <h3>{props.nombre} {props.apellido}</h3>
-          <div className='usuario-genero'>{props.genero}</div>
-          <div className='usuario-edad'>{props.edad}</div>
+          <h3>Nombre: {props.nombre} {props.apellido}</h3>
+          <div className='usuario-genero'>Género: {props.genero}</div>
+          <div className='usuario-edad'>Edad: {props.edad}</div>
         </div>
       </Card>
     </li>

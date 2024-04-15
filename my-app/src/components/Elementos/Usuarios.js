@@ -9,17 +9,16 @@ const Usuarios = (props) => {
 
     const [usuarios, setUsuarios] = useState(props.usuarios);
 
-    
+    const anadirUsuarioHandler = (nuevoUsuario) => {
+        setUsuarios((usuariosAnteriores) => {
+            return [... usuariosAnteriores, nuevoUsuario]
+        });
+    }
+
     if(usuarios.length === 0){
         return(
             <h2>Todavía no hay usuarios</h2>
         );
-    }
-
-    const anadirUsuarioHandler = (usuario) => {
-        setUsuarios((usuariosAnteriores) => {
-            return [usuariosAnteriores, ... usuario]
-        });
     }
 
     return (
