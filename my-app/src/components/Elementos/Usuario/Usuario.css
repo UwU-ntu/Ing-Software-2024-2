@@ -1,0 +1,12 @@
+
+.usuario {
+    display: block;
+    text-align: left;
+    list-style: none;
+    padding: none;
+    margin: none;
+}
+
+li{
+    list-style: none;
+}

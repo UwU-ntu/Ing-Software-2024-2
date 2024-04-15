@@ -3,6 +3,10 @@ import React, { useState } from "react";
 import "./App.css";
 
 import FiltroVistas from "./components/Elementos/FiltroVistas";
+import SampleView from "./components/Elementos/SampleView";
+import Usuarios from "./components/Elementos/Usuarios";
+import Peliculas from "./components/Elementos/Peliculas";
+import Rentas from "./components/Elementos/Rentas";
   
   const DUMMY_USERS = [
     {
@@ -81,6 +85,8 @@ import FiltroVistas from "./components/Elementos/FiltroVistas";
     };
 
 
+
+
     return(
       <div className="App">
         <h1>Servicio de Renta de Peliculas</h1>
@@ -88,6 +94,10 @@ import FiltroVistas from "./components/Elementos/FiltroVistas";
           selected={selectedView}
           onChangeFilter={filterChangeHandler}
         />
+        {selectedView == "SampleView" && <SampleView/>}
+        {selectedView == "Usuarios" && <Usuarios usuarios={DUMMY_USERS}/>}
+        {selectedView == "Peliculas" && <Peliculas peliculas={DUMMY_MOVIES}/>}
+        {selectedView == "Rentas" && <Rentas rentas={DUMMY_RENTALS}/>}
       </div>
     );
 

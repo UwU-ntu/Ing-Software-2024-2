@@ -5,7 +5,10 @@
     color: black;
     background-color: #1F98D3;
     border: none;
+}
 
+div{
+    width: 100%;
 }
 
 .filtro-vistas label{

@@ -1,13 +1,21 @@
 .App {
   text-align: center;
+  justify-content: center;
+    align-items: center;
+    display: block;
+    margin: 0px;
 }
 
 body{
-  background-color: #811D53;
+    background-color: #811D53;
     color: #BFB6CD;
     height: 100%;
-    width: 100%;
+    width: 70%;
     font-family: serif;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    margin: 0px;
 }
 
 .App-logo {

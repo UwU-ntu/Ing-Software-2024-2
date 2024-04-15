@@ -1,6 +1,7 @@
 import React from "react";
 
 import './NuevoUsuario.css';
+import Card from '../UI/Card';
 import UsuarioForm from "./UsuarioForm/UsuarioForm";
 
 const NuevoUsuario = (props) => {
@@ -13,9 +14,9 @@ const NuevoUsuario = (props) => {
     };
 
     return (
-        <div className="nuevo-usuario">
-            <RentaForm onGuardarUsuario={guardaUsuarioHandler} />
-        </div>
+        <Card className="nuevo-usuario">
+            <UsuarioForm onGuardarUsuario={guardaUsuarioHandler}/>
+        </Card>
     )
 }
 

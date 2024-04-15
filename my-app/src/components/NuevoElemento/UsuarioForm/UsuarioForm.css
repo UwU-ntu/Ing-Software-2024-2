@@ -1,0 +1,21 @@
+form{
+    background-color: #9B9E38;
+    padding: 20px 10px;
+    color: black;
+    border-radius: 3em;
+}
+
+label{
+    font-size: 1.2em;
+}
+
+button{
+    border-radius: 10px;
+    font-size: 1.5em;
+    padding: 1em;
+    margin: .5em;
+}
+
+.nuevo-usuario___control{
+    margin: .25em;
+}
